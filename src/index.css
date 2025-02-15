@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+body, html {
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 95%; /* Adjust width for some margin */
+  max-width: 500px; /* Optional: Set a max width */
+  background-color: #f8c0e4; /* Rich red */
+  border: 1px solid #333; /* Add a 1px solid border with a dark gray color */
+}
+
+
+@theme {
+  --animate-wiggle: wiggle 3s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}
+
+@layer components {
+  @keyframes grow-shrink {
+    0%, 100% {
+      transform: scale(1); /* Element's initial and final state */
+    }
+    50% {
+      transform: scale(1.15); /* Scale the element to 1.5x */
+    }
+  }
+
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  .flip-animation {
+    animation: flip 0.5s ease-in-out;
+  }
+
+  /* Custom animation class */
+  .animate-grow-shrink {
+    animation: grow-shrink 1s ease-in-out infinite;
+  }
+
+  .fade-in {
+    animation: fade-in 1000ms ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
