@@ -40,7 +40,7 @@ function Five() {
     setTimeLeft(30.0);
     setValue("");
 
-    if(counter >= 20)
+    if(counter >= 15)
     {
       setShowNext(true);
     }
@@ -77,7 +77,7 @@ function Five() {
           {startTimer ? (<p className="transition duration-300 ease-in-out text-2xl text-pink-600 mb-6 hover:scale-115 cursor-pointer">
             {timeLeft.toFixed(1)}
           </p>) : (<p className="transition duration-300 ease-in-out text-2xl text-pink-600 mb-6 hover:scale-115 cursor-pointer">
-            Goal: 20 correct answers in 30 seconds
+            Goal: 15 correct answers in 30 seconds
           </p>)  
           }
           {
