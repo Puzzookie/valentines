@@ -130,7 +130,7 @@ function Six() {
         className="mt-6 mb-6 card bg-gradient-to-b from-pink-200 via-pink-100 to-pink-200 text-gray-800 shadow-2xl rounded-lg p-8 max-w-lg w-full text-center relative"
       >
         <FadeInComponent>
-        <h1 className="transition duration-300 ease-in-out text-4xl text-pink-600 font-bold mb-6 mt-6 hover:scale-115 cursor-pointer">
+        <h1 className="min-h-36 transition duration-300 ease-in-out text-4xl text-pink-600 font-bold mb-6 mt-6 hover:scale-115 cursor-pointer">
         {(hasChosen && !startTimer) ? "Keep your eyes on 🤴🏻" : "Don't Blink"}
         </h1>
         <div className="relative flex justify-center items-center mt-18 mb-18">
